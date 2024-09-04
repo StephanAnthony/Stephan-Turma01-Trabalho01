@@ -56,7 +56,7 @@ Certifique-se de ter o [Node.js](https://nodejs.org/) e o [npm](https://www.npmj
 Clone o repositório e instale as dependências:
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
-cd <NOME_DO_REPOSITORIO>
+git clone <https://github.com/StephanAnthony/Stephan-Turma01-Trabalho01>
+cd <Stephan-Turma01-Trabalho01>
 npm install
 npm run test
