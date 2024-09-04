@@ -1,27 +1,62 @@
-# JEST Unit Tests
+# Testes da Classe GerenciadorDeTarefas
 
-## GitHub Actions
+Este repositório contém uma suíte de testes para a classe `GerenciadorDeTarefas`. Estes testes garantem que as funcionalidades da classe estão funcionando conforme o esperado.
 
-[![Build and Tests](https://github.com/ugioni/unit-tests-jest/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/ugioni/unit-tests-jest/actions/workflows/node.js.yml)
+## Descrição dos Testes
 
-## SonarCloud
+Os testes são escritos em JavaScript utilizando o framework Jest. Abaixo está uma descrição de cada teste implementado:
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ugioni_unit-tests-jest&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ugioni_unit-tests-jest)
+1. **Adicionar uma Tarefa com Descrição Válida**
+   - Verifica se uma tarefa com uma descrição válida é adicionada corretamente à lista de tarefas.
 
-## Getting Started
+2. **Não Adicionar uma Tarefa com Descrição Inválida**
+   - Garante que uma tarefa com uma descrição inválida (por exemplo, apenas números) não é adicionada e um erro apropriado é lançado.
 
-In order to execute this project you must follow the steps below:
+3. **Remover uma Tarefa Existente**
+   - Testa se uma tarefa existente pode ser removida da lista corretamente.
 
-1. Install [Node JS](https://nodejs.org/) (version >= 20.x)
-1. Run `npm install` to install all the project dependencies
-1. Run `npm run test` to execute the entire test suite
-1. Run `npm run coverage` to execute the entire test suite with coverage
+4. **Buscar uma Tarefa por ID**
+   - Confirma que é possível recuperar uma tarefa pelo seu ID.
 
-All execution artifacts can be found in `./coverage`, if you want to remove these files run `npm run clean`.
+5. **Contar o Número de Tarefas**
+   - Verifica se o número total de tarefas é contado corretamente.
 
-## Project Structure
-</br>
-<ul>
-    <li>src: source code</li>
-    <li>test: unit test files</li>
-</ul>
+6. **Marcar uma Tarefa como Concluída**
+   - Testa a funcionalidade de marcar uma tarefa como concluída e verifica se o status de conclusão é atualizado corretamente.
+
+7. **Listar Tarefas Concluídas**
+   - Garante que apenas as tarefas concluídas são listadas quando solicitadas.
+
+8. **Listar Tarefas Pendentes**
+   - Verifica se apenas as tarefas pendentes são listadas.
+
+9. **Adicionar e Remover Tags de uma Tarefa**
+   - Testa se tags podem ser adicionadas e removidas de uma tarefa corretamente.
+
+10. **Listar Tarefas por Tag**
+    - Verifica se as tarefas podem ser filtradas corretamente com base nas tags associadas.
+
+11. **Ordenar Tarefas por Data**
+    - Garante que as tarefas são ordenadas corretamente com base na data.
+
+12. **Ordenar Tarefas por Prioridade**
+    - Testa se as tarefas são ordenadas de acordo com a prioridade, com as tarefas de maior prioridade aparecendo primeiro.
+
+## Estrutura do Projeto
+
+- **`src/GerenciadorDeTarefas.js`**: Implementação da classe `GerenciadorDeTarefas`.
+- **`test/GerenciadorDeTarefas.test.js`**: Contém os testes automatizados para a classe `GerenciadorDeTarefas`.
+
+## Requisitos
+
+Certifique-se de ter o [Node.js](https://nodejs.org/) e o [npm](https://www.npmjs.com/) instalados.
+
+## Instalação
+
+Clone o repositório e instale as dependências:
+
+```bash
+git clone <URL_DO_REPOSITORIO>
+cd <NOME_DO_REPOSITORIO>
+npm install
+npm run test
